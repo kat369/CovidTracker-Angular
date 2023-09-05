@@ -1,0 +1,22 @@
+
+<div class="body-list">
+  <table class="table table-striped">
+    <thead>
+      <tr >
+        <th *ngFor="let keys of title">{{keys}}</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let keys of covidData">
+        <td>{{keys['area']}}</td>
+        <td>{{keys['active']}}</td>
+        <td>{{keys['confirmed']}}</td>
+        <td>{{keys['recovered']}}</td>
+        <td>{{keys['home_obs']}}</td>
+        <td>{{keys['hospital_obs']}}</td>
+        <td>{{keys['total_obs']}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

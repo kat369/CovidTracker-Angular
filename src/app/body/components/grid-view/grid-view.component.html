@@ -1,0 +1,19 @@
+<div class="card-container">
+    
+      <div class="card" *ngFor="let keys of covidData">
+        <h2 class="card-header">{{keys['area']}}</h2>
+        <div class="card-body">
+          <h4 class="card-title">Active Cases : {{keys['active']}}</h4>
+          <div>
+            <span>Confirmed: {{keys['confirmed']}}</span>
+            <span>Recovered: {{keys['recovered']}}</span>
+          </div>
+          <div>
+            <span>Home-obs: {{keys['home_obs']}}</span>
+            <span>Hospital-obs: {{keys['hospital_obs']}}</span>
+          </div>
+          <span>Total-obs: {{keys['total_obs']}}</span>
+        </div>
+      </div>
+   
+  </div>

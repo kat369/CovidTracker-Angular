@@ -1,0 +1,19 @@
+
+<div class="body-container">
+    <div class="tabel-act">
+        <input
+        class='search-input'
+        type="text"
+        placeholder="Search by Area"
+    />
+        <app-tabel-actions (viewChange)="viewUpdated($event)"></app-tabel-actions>
+    </div>
+    <div class="table-container" [ngSwitch]="view">
+        <div *ngSwitchCase="0">
+            <app-list-view [covidDatum]="datum"></app-list-view>
+        </div>
+        <div *ngSwitchCase="1">
+            <app-grid-view [covidDatum]="datum"></app-grid-view> 
+        </div> 
+    </div>
+  </div>
